@@ -11,7 +11,6 @@ from musicbot.utils import guild_to_audiocontroller, guild_to_settings
 from musicbot.commands.general import General
 import pdb
 
-pdb.set_trace()
 initial_extensions = ['musicbot.commands.music',
                       'musicbot.commands.general', 'musicbot.plugins.button']
 bot = commands.Bot(command_prefix=config.BOT_PREFIX,
