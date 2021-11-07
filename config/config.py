@@ -1,8 +1,11 @@
-BOT_TOKEN: str = ""
-SPOTIFY_ID: str = ""
-SPOTIFY_SECRET: str = ""
+BOT_TOKEN: str = "OTA2NzMxMzY2NjAxODY3Mjg0.YYc5ZA.qRwTO7cWzdaogwnHv2UJWWFQHhw"
+SPOTIFY_ID: str = "a5ef1b83c5af494a816725d1c69ff66a"
+SPOTIFY_SECRET: str = "4a44d3dbf8d0491f81e2956f527e83e7"
 
-BOT_PREFIX = "$"
+APP_ID = 906731366601867284
+PUB_KEY = '598cfb6ba4224f790a6754b85afb3c76d4a5dad0f0937174e1dae9ad2e421d86'
+
+BOT_PREFIX = "/"
 
 EMBED_COLOR = 0x4dd4d0  #replace after'0x' with desired hex code ex. '#ff0188' >> '0xff0188'
 
