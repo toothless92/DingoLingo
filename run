@@ -1,0 +1,1 @@
+nohup python3 ~/DingoLingo/run.py > bot_log.log 2>&1 <&- &

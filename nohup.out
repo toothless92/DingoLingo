@@ -30,3 +30,88 @@ Traceback (most recent call last):
   File "/home/ubuntu/DingoLingo/musicbot/audiocontroller.py", line 312, in timeout_handler
     if len(self.guild.voice_client.channel.voice_states) == 1:
 AttributeError: 'NoneType' object has no attribute 'channel'
+[download] Downloading playlist: screams
+Starting Bot...
+Joined AP Friendship
+Startup Complete
+[youtube:search] query "screams": Downloading page 1
+[youtube:search] playlist screams: Downloading 1 videos
+[download] Downloading video 1 of 1
+[youtube] 7GCXjit32tc: Downloading webpage
+[youtube] 7GCXjit32tc: Refetching age-gated info webpage
+WARNING: unable to download video info webpage: HTTP Error 410: Gone
+[youtube] Downloading just video 7GCXjit32tc because of --no-playlist
+ERROR: Sign in to confirm your age
+This video may be inappropriate for some users.
+Ignoring exception in command play:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 815, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 836, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/extractor/common.py", line 534, in extract
+    ie_result = self._real_extract(url)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/extractor/youtube.py", line 1713, in _real_extract
+    raise ExtractorError(reason, expected=True)
+youtube_dl.utils.ExtractorError: Sign in to confirm your age
+This video may be inappropriate for some users.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/ext/commands/core.py", line 85, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ubuntu/DingoLingo/musicbot/commands/music.py", line 47, in _play_song
+    song = await audiocontroller.process_song(track)
+  File "/home/ubuntu/DingoLingo/musicbot/audiocontroller.py", line 136, in process_song
+    track = self.search_youtube(track)
+  File "/home/ubuntu/DingoLingo/musicbot/audiocontroller.py", line 273, in search_youtube
+    r = ydl.extract_info(title, download=False)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 808, in extract_info
+    return self.__extract_info(url, ie, download, extra_info, process)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 815, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 847, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 885, in process_ie_result
+    return self.extract_info(ie_result['url'],
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 808, in extract_info
+    return self.__extract_info(url, ie, download, extra_info, process)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 815, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 847, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 933, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 1067, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, extra)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 815, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 1076, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 885, in process_ie_result
+    return self.extract_info(ie_result['url'],
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 808, in extract_info
+    return self.__extract_info(url, ie, download, extra_info, process)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 824, in wrapper
+    self.report_error(compat_str(e), e.format_traceback())
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 628, in report_error
+    self.trouble(error_message, tb)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/youtube_dl/YoutubeDL.py", line 598, in trouble
+    raise DownloadError(message, exc_info)
+youtube_dl.utils.DownloadError: ERROR: Sign in to confirm your age
+This video may be inappropriate for some users.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 939, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/ext/commands/core.py", line 863, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/ext/commands/core.py", line 94, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: DownloadError: ERROR: Sign in to confirm your age
+This video may be inappropriate for some users.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f36643eafa0>
