@@ -1,0 +1,32 @@
+Starting Bot...
+Joined AP Friendship
+Startup Complete
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f9dc7dd6490>
+Starting Bot...
+Joined AP Friendship
+Startup Complete
+Traceback (most recent call last):
+  File "./run.py", line 86, in <module>
+    bot.run(config.BOT_TOKEN, bot=True, reconnect=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/client.py", line 723, in run
+    return future.result()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/client.py", line 702, in runner
+    await self.start(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/client.py", line 666, in start
+    await self.connect(reconnect=reconnect)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/client.py", line 566, in connect
+    await self.ws.poll_event()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/discord/gateway.py", line 582, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4004
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f862639efa0>
+Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Timer._job() done, defined at /home/ubuntu/DingoLingo/musicbot/utils.py:86> exception=AttributeError("'NoneType' object has no attribute 'channel'")>
+Traceback (most recent call last):
+  File "/home/ubuntu/DingoLingo/musicbot/utils.py", line 88, in _job
+    await self._callback()
+  File "/home/ubuntu/DingoLingo/musicbot/audiocontroller.py", line 312, in timeout_handler
+    if len(self.guild.voice_client.channel.voice_states) == 1:
+AttributeError: 'NoneType' object has no attribute 'channel'
