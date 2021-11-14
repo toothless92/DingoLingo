@@ -1,3 +1,5 @@
+#! /bin/python3
+
 import discord
 import os
 from discord.ext import commands
