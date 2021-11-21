@@ -3,3 +3,4 @@ youtube-dl
 aiohttp
 beautifulsoup4
 spotipy
+python-dotenv
