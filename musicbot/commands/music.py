@@ -61,8 +61,7 @@ class Music(commands.Cog):
             await ctx.send(config.SONGINFO_PLAYLIST_QUEUED)
 
     @commands.command(name='bounce', description='B O U N C E', help='B O U N C E')
-    async def _type_bounce(self, ctx, *args):
-        loops = int(args[0])
+    async def _type_bounce(self, ctx, *, loops: int=1):
         for x in range(loops):
             await ctx.invoke(self.bot.get_command('play'), track = 'https://www.youtube.com/watch?v=emUT-wjeG70')
 
