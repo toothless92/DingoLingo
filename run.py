@@ -1,6 +1,7 @@
 #! /bin/python3
 
-import sys; print(sys.path)
+print("OCTAVE-II STARTUP ************************************************************")
+
 import discord
 import os
 from discord.ext import commands
