@@ -1,5 +1,6 @@
-discord.py[voice]
-youtube-dl
+py-cord
+py-cord[voice]
+yt-dlp
 aiohttp
 beautifulsoup4
 spotipy

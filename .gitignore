@@ -1,2 +1,4 @@
 *.pyc
 *.env
+*.save
+*.save.1

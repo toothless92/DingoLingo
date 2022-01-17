@@ -1,7 +1,7 @@
-import os
 import json
+import os
+
 import discord
-import asyncio
 from config import config
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -62,6 +62,8 @@ class Settings():
                 self.config[key] = self.settings_template.get(key)
                 refresh = True
         if refresh:
+            with open(self.path, 'w') as source:
+                json.dump(self.json_data, source)
             self.reload()
 
     def create(self):
@@ -161,7 +163,11 @@ class Settings():
             return False
         else:
             self.config[setting] = value
-            await self.guild.me.edit(nick=value)
+            try:
+                await self.guild.me.edit(nick=value)
+            except:
+                await ctx.send("`Error: Cannot set nickname. Please check bot permissions.")
+
 
     async def command_channel(self, setting, value, ctx):
 
