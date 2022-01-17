@@ -1,9 +1,12 @@
-BOT_TOKEN: str = ""
-SPOTIFY_ID: str = "a5ef1b83c5af494a816725d1c69ff66a"
-SPOTIFY_SECRET: str = "4a44d3dbf8d0491f81e2956f527e83e7"
+from dotenv import load_dot
 
-APP_ID = 906731366601867284
-PUB_KEY = '598cfb6ba4224f790a6754b85afb3c76d4a5dad0f0937174e1dae9ad2e421d86'
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+SPOTIFY_ID = os.getenv('SPOTIFY_ID')
+SPOTIFY_SECRET = os.getenv('SPOTIFY_SECRET')
+APP_ID = os.getenv('APP_ID')
+PUB_KEY = os.getenv('PUB_KEY')
 
 BOT_PREFIX = "\\"
 
@@ -48,7 +51,7 @@ SONGINFO_DISLIKES = "Dislikes: "
 SONGINFO_NOW_PLAYING = "Now Playing"
 SONGINFO_QUEUE_ADDED = "Added to queue"
 SONGINFO_SONGINFO = "Song info"
-SONGINFO_ERROR = "Error: Unsupported site or age restricted content. To enable age restricted content check the documentation/wiki."
+SONGINFO_UNKNOWN_SITE = "Unknown site :question:"
 SONGINFO_PLAYLIST_QUEUED = "Queued playlist :page_with_curl:"
 SONGINFO_UNKNOWN_DURATION = "Unknown"
 
@@ -74,6 +77,8 @@ HELP_RESUME_SHORT = "Resume Music"
 HELP_RESUME_LONG = "Resumes the AudioPlayer."
 HELP_SKIP_SHORT = "Skip a song"
 HELP_SKIP_LONG = "Skips the currently playing song and goes to the next item in the queue."
+HELP_REMOVE_SHORT = "Remove a song fomm the queue."
+HELP_REMOVE_LONG = "Enter a queue position number to remove the song."
 HELP_SONGINFO_SHORT = "Info about current Song"
 HELP_SONGINFO_LONG = "Shows details about the song currently being played and posts a link to the song."
 HELP_STOP_SHORT = "Stop Music"
@@ -92,5 +97,7 @@ HELP_SHUFFLE_SHORT = "Shuffle the queue"
 HELP_SHUFFLE_LONG = "Randomly sort the songs in the current queue"
 HELP_CHANGECHANNEL_SHORT = "Change the bot channel"
 HELP_CHANGECHANNEL_LONG = "Change the bot channel to the VC you are in"
+HELP_BOUNCE_SHORT = "bounce."
+HELP_BOUNCE_LONG = "B O U N C E."
 
 ABSOLUTE_PATH = '' #do not modify
