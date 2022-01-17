@@ -2,7 +2,6 @@
 
 print("OCTAVE-II STARTUP ************************************************************")
 
-import discord
 import os
 
 import discord
@@ -12,9 +11,6 @@ from config import config
 from musicbot.audiocontroller import AudioController
 from musicbot.settings import Settings
 from musicbot.utils import guild_to_audiocontroller, guild_to_settings
-
-from musicbot.commands.general import General
-import pdb
 
 initial_extensions = ['musicbot.commands.music',
                       'musicbot.commands.general', 'musicbot.plugins.button']
