@@ -61,6 +61,11 @@ class Music(commands.Cog):
         for x in range(loops):
             await ctx.invoke(self.bot.get_command('play'), track = 'https://www.youtube.com/watch?v=emUT-wjeG70')
 
+    @commands.command(name='pipe', description='p i p e', help='p i p e')
+    async def _type_pipe(self, ctx, *, loops: int=1):
+        for x in range(loops):
+            await ctx.invoke(self.bot.get_command('play'), track = 'https://www.youtube.com/watch?v=oZAGNaLrTd0')
+
     @commands.command(name='loop', description=config.HELP_LOOP_LONG, help=config.HELP_LOOP_SHORT, aliases=['l'])
     async def _loop(self, ctx):
 
